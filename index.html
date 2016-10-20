@@ -12,7 +12,7 @@
     <title>Hangman-Week-3-Game</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 
@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -59,10 +59,71 @@
                     <h5>Put your hard hat on and get ready to play!</h5>
                     <hr>
                     <div class="containerInside">
+
+                        <h4 id="wins">Wins:</h4>
+                        <h4 id="remain">Number of Guesses Remaining:</h4>
+                        <h4 id="guessed">Letters Already Guessed:</h4>
+
                         <script type="text/javascript">
-                            var wins = 1;
+
+                        $(document).reset
+                        var start=document.getElementId("startButton");
+
+                        var wordbank = ["Chicago", "Cleveland", "Detroit", "Baltimore", "Boston", "Toronto"];
+                        
+                        start.onclick=function(){}
+                            
+                            var wins = 0;
+                            var display = $("wins");
+                            var display = $("remain");
+                            var display = $("guessed");
+
+                            for (var i = 0; i < alphabet.length; i++)({
+                            }
+
+                            ('').onkeypress function(){
+                                lettersGuessed++;
+                                console.log(lettersGuessed);
+
+                                display.html("#wins: " +  )
+                            })
+
+                            var wins = [];
                             console.log(wins);
-    
+
+                            var guessesRemaining = [];
+                            console.log(guessesRemaining);
+
+                            var lettersGuessed = [];
+                            console.log(lettersGuessed);
+
+
+                            var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+                            var computerchoice= wordbank[Math.floor(Math.random()*wordbank.length)].split("");
+                            function {
+                            
+                            document.onKeyup = function(event){
+                                
+                                var userInput=String.fromCharCode
+                                (event.keycode).toLowerCase();
+
+                                if (letterSpent.indexOf(userInput.toString()== -1){
+
+                                }
+                            }
+
+                            var letterSpent={};
+                            var livesleft=5
+                            var wins=0
+                            var display=document.getElementId("lives");
+                            }
+                            
+                            
+                            
+                            //pos = indians.indexOf('d');
+                            //pos = 2; returns -1 if not there.
+                            //hangman = indians.split('')
                         </script>
                     </div>
                 </div>
