@@ -69,7 +69,9 @@ hangman.src = "http://www.writteninpencil.de/Projekte/Hangman/hangman" + error +
     if(error === 8){
         alert("Uh...I guess you're dead now.");
     }
+
 }  
+
 
 function init(){
     printRemain();
