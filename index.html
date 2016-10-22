@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <h2>HANGMAN</h2>
+                    <h1>HANGMAN</h1>
                     <hr>
                     <h5>Put your hard hat on and get ready to play!</h5>
                     <hr>
@@ -63,15 +63,15 @@
                         
                         <h4 id="wins">Wins:</h4>
                         <br>
-                        <h4 id="current">Current Word</h4>
+                        <h4 id="inspect">Current Word</h4>
                         <br>
-                        <h4 id="remaining">Number of Guesses Remaining:</h4>
+                        <h4 id="remain">Number of Guesses Remaining:</h4>
                         <br>
-                        <h4 id="tryAgain">Letters Already Guessed:</h4>
+                        <h4 id="guessedLetters">Letters Already Guessed:</h4>
 
-                        <form name="forming">
-                        <input name="wasPicked" type="text" size="4" maxlength="1">
-                        <input name="ratebutton" type="button" value="Guess" onClick="fooMatches()">
+                        <form name="rateformular">
+                        <input name="foomatches" type="text" size="4" maxlength="1">
+                        <input name="ratebutton" type="button" value="Guess" onClick="tryMatches()">
                         <br>
                         <br>
                         <br>
@@ -81,67 +81,6 @@
                         </form>
 
                         <script type="text/javascript" src="assets/javascript/game.js"></script>
-                       <!--  <script type="text/javascript">
-
-                        $(document).reset
-                        var start=document.getElementId("startButton");
-
-                        var wordbank = ["Chicago", "Cleveland", "Detroit", "Baltimore", "Boston", "Toronto"];
-                        
-                        start.onclick=function(){}
-                            
-                            var wins = 0;
-                            var display = $("wins");
-                            var display = $("remain");
-                            var display = $("guessed");
-
-                            for (var i = 0; i < alphabet.length; i++)({
-                            }
-
-                            ('').onkeypress function(){
-                                lettersGuessed++;
-                                console.log(lettersGuessed);
-
-                                display.html("#wins: " +  )
-                            })
-
-                            var wins = [];
-                            console.log(wins);
-
-                            var guessesRemaining = [];
-                            console.log(guessesRemaining);
-
-                            var lettersGuessed = [];
-                            console.log(lettersGuessed);
-
-
-                            var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-                            var computerchoice= wordbank[Math.floor(Math.random()*wordbank.length)].split("");
-                            function {
-                            
-                            document.onKeyup = function(event){
-                                
-                                var userInput=String.fromCharCode
-                                (event.keycode).toLowerCase();
-
-                                if (letterSpent.indexOf(userInput.toString()== -1){
-
-                                }
-                            }
-
-                            var letterSpent={};
-                            var livesleft=5
-                            var wins=0
-                            var display=document.getElementId("lives");
-                            }
-                            
-                            
-                            
-                            //pos = indians.indexOf('d');
-                            //pos = 2; returns -1 if not there.
-                            //hangman = indians.split('')
-                        </script> -->
                     </div>
                 </div>
             </div>

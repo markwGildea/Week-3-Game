@@ -4,43 +4,51 @@ var trywords = [
     ["D","E","T","R","O","I","T"],
     ["B","O","S","T","O","N"],
     ["B","A","L","T","I","M","O","R","E"]
+    ["P","O","R","T","L","A","N","D"]
 ]
-var random = Math.floor((Math.random() * (tryWords.length-1)));
+document.onkeyup = function(event) {
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+}
+var random = Math.floor((Math.random() * (trywords.length-1)));
 
 var guess = trywords[random];
 var remain = new Array(guess.length);
 var error = 0;
 
+// every abc in the word is symbolized by an underscore in the guessfield
 for (var i =0; i < remain.length; i++){
     remain[i] = "_ ";
 }
-                            
-  function printRemain(){
-    for (var i = 0; i < remain.length; i++){
-        var inspect = document.getElementById("inspect");
-        var letter = document.createTextNode(remain[i]);
-        inspect.appendChild(gotchya);
-        }
-  }    
 
+// prints the guessfield                        
+function printRemain(){
+    for (var i = 0; i < remain.length; i++){
+    var inspect = document.getElementById("inspect");
+    var letter = document.createTextNode(remain[i]);
+    inspect.appendChild(letter);
+    }
+}   
+
+  //checks if the the abc provided by the user matches one or more of the abcs in the word
   var tryMatches = function(){
-    var t = document.forming;
-    var f = t.elements["foomatches"];
+    var f = document.rateformular;
+    var b = f.elements["foomatches"];
     var matches = f.value;
-    matches = matches.toUpperCase();
+    matches = matches.toLowerCase();
     for (var i =0; i < guess.length; i++){
         if (guess[i] === matches){
             remain[i] = matches + " ";
             var indeed = true;
         }
-    f.value = "";
+    b.value = "";
     }
   
-
+    //deletes the guessfield and replaces it with the new one
     var inspect = document.getElementById("inspect");
     inspect.innerHTML=""; 
     printRemain();
 
+// if a guessed abc is not in the word, the abc will be put on the "abcs Already Guessed"-list and hangman grows
 if(!indeed){
     var guessedLetters = document.getElementById("guessedLetters");
     var letter = document.createTextNode("" + picked);
@@ -48,23 +56,38 @@ if(!indeed){
     error++;
     var hangman = document.getElementById("hangman");
 hangman.src = "http://www.writteninpencil.de/Projekte/Hangman/hangman" + error + ".png";
-}    
+}   
 
-var chosen = true;
-for (var i = 0; i < remain.length; i++){
+    //checks if all abc have been found
+    var chosen = true;
+    for (var i = 0; i < remain.length; i++){
          if(remain[i] === "_ "){
              chosen = false;
          }
     }  
     if(chosen){
-        alert("You win!");
+        window.alert("You win!");
     }
-    
+    //once you got six wrong abc, you lose
     if(error === 6){
-        alert("Uh...I guess you're dead now.");
+        window.alert("Uh...I guess you're dead now.");
     }
 
 }  
+
+var html = "<h3>Press Any Key To Get Started</h3>" +
+        "<p>guess: " + 
+        guess + 
+        "</p>" +
+        "<p>remain: " + 
+        remain + 
+        "</p>" +
+        "<p>error: " + 
+        error + 
+        "</p>";
+
+        // Placing the html into the game ID
+        document.querySelector('#game').innerHTML = html;
 
 function init(){
     printRemain();
