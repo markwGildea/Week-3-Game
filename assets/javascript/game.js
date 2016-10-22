@@ -47,29 +47,26 @@ if(!indeed){
     guessedLetters.appendChild(letter);
     error++;
     var hangman = document.getElementById("hangman");
-    hangman.src = "http://www.writteninpencil.de/Projekte/Hangman/hangman" + error + ".png";
-
+hangman.src = "http://www.writteninpencil.de/Projekte/Hangman/hangman" + error + ".png";
 }    
 
-var chosen= true;
-
-     for (var i = 0; i < Remain.length; i++){
-         if(Remain[i] === "_ "){
+var chosen = true;
+for (var i = 0; i < remain.length; i++){
+         if(remain[i] === "_ "){
              chosen = false;
          }
     }  
-
-    if(Chosen){
-    window.alert("You win!");
+    if(chosen){
+        alert("You win!");
     }
     
-    if(Wins === 6) {
-    window.alert("Uh...I guess you're dead now.");
+    if(error === 6){
+        alert("Uh...I guess you're dead now.");
     }
 
 }  
 
-    function init(){
+function init(){
     printRemain();
 }
 
