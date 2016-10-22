@@ -15,7 +15,6 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../assets/javascript/game.js"></script>
 
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/freelancer.css">
@@ -60,7 +59,7 @@
                     <hr>
                     <h5>Put your hard hat on and get ready to play!</h5>
                     <hr>
-                    <div id="remaining">
+                    <div id="game">
                         
                         <h4 id="wins">Wins:</h4>
                         <br>
@@ -69,17 +68,19 @@
                         <h4 id="remaining">Number of Guesses Remaining:</h4>
                         <br>
                         <h4 id="tryAgain">Letters Already Guessed:</h4>
+
                         <form name="forming">
-                        <input name="wasPicked" type="text" size="10" maxlength="1">
-                        <input name="ratebutton" type="button" value="Guess" onClick="matches()">
+                        <input name="wasPicked" type="text" size="4" maxlength="1">
+                        <input name="ratebutton" type="button" value="Guess" onClick="fooMatches()">
                         <br>
                         <br>
                         <br>
+                        <img src="http://www.writteninpencil.de/Projekte/Hangman/hangman0.png" id="hangman"><br />
                         <input name="refresh" type="button" value="New Game" onClick="location.reload()">
 
                         </form>
 
-                        <script type="text/javascript" src="../assets/javascript/game.js"></script>
+                        <script type="text/javascript" src="assets/javascript/game.js"></script>
                        <!--  <script type="text/javascript">
 
                         $(document).reset
