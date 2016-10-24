@@ -66,7 +66,7 @@ hangman.src = "http://www.writteninpencil.de/Projekte/Hangman/hangman" + error +
         alert("You win!");
     }
     //once you got six wrong letters, you lose
-    if(error === 8){
+    if(error === 6){
         alert("Uh...I guess you're dead now.");
     }
 
