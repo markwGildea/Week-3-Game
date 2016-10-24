@@ -31,7 +31,7 @@ function printRemain(){
     var f = document.rateformular;
     var b = f.elements["foomatches"];
     var matches = b.value; //letter inputed by user
-    matches = matches.toLowerCase();
+    matches = matches.toUpperCase();
     for (var i =0; i < guess.length; i++){
         if (guess[i] === matches){
             remain[i] = matches + " ";
