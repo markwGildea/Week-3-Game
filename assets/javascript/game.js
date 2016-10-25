@@ -72,7 +72,6 @@ hangman.src = "http://www.writteninpencil.de/Projekte/Hangman/hangman" + error +
 
 }  
 
-
 function init(){
     printRemain();
 }
